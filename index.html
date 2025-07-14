@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loco.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="minicircle"></div>
+    <div id="main">
+         <div id="hero">
+            <div id="nav">
+                <a href="#hero">OtakuNest.in</a>
+                <h4>MENU+</h4>
+            </div>
+            <div>
+                <div class="logo-carousel">
+                <div class="logo-track">
+                    <img src="images/Attack-on-Titan-Logo-916854929.png" alt="attackontitan">
+                    <img src="images/death_note_logo.png" alt="deathnote">
+                    <img src="images/Demon-Slayer-Logo-35361415.png" alt="demonslayer">
+                    <img src="images/dragon_ball_z_logo.png" alt="dragonballz">
+                    <img src="images/logo___naruto___by_shikomt_by_shikomt_dbemuvd-fullview-3273501295.png" alt="naruto">
+                    <img src="images/One-Piece-Logo.png" alt="onepiece">
+                    <img src="images/pokemon-logo-png.png" alt="pokemongo">
+
+                    <!-- Repeat exact same logos again for seamless scroll -->
+                    <img src="images/Attack-on-Titan-Logo-916854929.png" alt="attackontitan">
+                    <img src="images/death_note_logo.png" alt="deathnote">
+                    <img src="images/Demon-Slayer-Logo-35361415.png" alt="demonslayer">
+                    <img src="images/dragon_ball_z_logo.png" alt="dragonballz">
+                    <img src="images/logo___naruto___by_shikomt_by_shikomt_dbemuvd-fullview-3273501295.png" alt="naruto">
+                    <img src="images/One-Piece-Logo.png" alt="onepiece">
+                    <img src="images/pokemon-logo-png.png" alt="pokemongo">
+                </div>
+                </div>
+            </div>
+            <div id="heading">
+                <div class="bounding">
+                    <h1 class="boundingelem">Otaku</h1>
+                </div>
+                <div class="blocktext">
+                    <div class="bounding">
+                        <h1 class="boundingelem" id="secondh1">Nest.in</h1>
+                    </div>
+                    <div class="bounding">
+                        <h5 class="boundingelem">Based in chd</h5>
+                    </div>
+                </div>
+            </div>
+            <div id="chhotiheadings">
+                <div class="bounding">
+                    <h5 class="boundingelem">Where Every Otaku Finds Their Treasure</h5>
+                </div>
+                <div class="bounding">
+                    <h5 class="boundingelem">Collect. Wear. Obsess'</h5>
+                </div>
+            </div>
+            <div id="herofooter">
+                <a href="#about">about us<i class="ri-arrow-right-up-line"></i></a>
+                <a href="#footer">contact us<i class="ri-arrow-right-up-line"></i></a>
+            </div>
+        </div> 
+        <div id="second">
+            <div class="elem">
+                <img src="images/photo.jpg" alt="shinchan">
+                <h1>shinchan</h1>
+                <h5>@300</h5>
+            </div>
+            <div class="elem">
+                <img src="images/keychain.jpg" alt="keychain">
+                <h1>keychain keychain</h1>
+                <h5>@200</h5>
+            </div>
+            <div class="elem elemlast">
+                <img src="images/itachi.jpg" alt="itachi">
+                <h1>itachi action figure</h1>
+                <h5>@600</h5>
+            </div>
+        </div>
+        <div id="about">
+            <img src="images/american.jpg" alt="picture">
+            <div id="textabout">
+                <h5>(ABout us)</h5>
+                <p>we are trending product importer with a passion for distributing products that not only look 
+                    good but also have best quality. our selling philosophy is simple: pick visually nice and attractive 
+                    items, purchase them on bulk, and sell them to the our customers and bring a smile to 
+                    there faces. we bring the best products from all over the world to your dorstep, with the help of our delevery partners'.</p>
+                <a href="https://mail.google.com/mail/u/0/?to=recipient@example.com&su=Email+Subject&body=Hello+There&tf=cm">Let's talk</a>
+            </div>
+        </div>
+        <div id="subscribe">
+            <h5>(forgot to mention)</h5>
+            <h3>subscribe to my youtube channel <i class="ri-arrow-right-up-line"></i></h3>
+        </div>
+        <div id="footer">
+            <div id="footerleft">
+                <h5 id="year"></h5>
+                <h5 id="time"></h5>
+            </div>
+            <script>
+                // Set current year
+                document.getElementById('year').innerHTML = new Date().getFullYear() + ' &copy;';
+
+                // Function to update time in HH:MM AM/PM format
+                function updateTime() {
+                    const now = new Date();
+                    let hours = now.getHours();
+                    const minutes = now.getMinutes().toString().padStart(2, '0');
+                    const ampm = hours >= 12 ? 'PM' : 'AM';
+                    hours = hours % 12;
+                    hours = hours ? hours : 12; // the hour '0' should be '12'
+                    const timeString = `${hours}:${minutes} ${ampm}`;
+                    document.getElementById('time').innerHTML = timeString + ' EST';
+                }
+                updateTime();
+                setInterval(updateTime, 1000);
+            </script>
+            <div id="footerright">
+                <a href="#">instagram</a><a href="#">twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
